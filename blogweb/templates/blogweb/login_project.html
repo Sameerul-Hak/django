@@ -1,0 +1,107 @@
+<!-- <h2>Login</h2 -->
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
+        /* Center the form on the page */
+        .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+align-content: center;
+  height: 100vh;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(147, 102, 235, 1) 100%
+  );
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  padding: 2rem;
+  background-color: #fff;
+  align-content: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+  border: 2px solid black ;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: #0077b6;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #023e8a;
+}
+#title
+{
+  color:red;
+  border-bottom: 2px solid white;
+  position: relative;
+  font-size: 50px;
+  top: -100px;
+}
+
+    </style>
+
+<div class="container">
+    <h1 id="title">THIS IS NOT FOR USERS 
+    </h1>
+    <form method="post">
+        {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" name="username" value="{{ username }}" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required>
+        <br>
+        <input type="submit" value="Login">
+    </form>
+</div>

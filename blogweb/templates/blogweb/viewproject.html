@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static '\uploads\projectview.css' %}" />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="contl">
+      <h1 id="hea">assigned projects</h1>
+      <div class="viewproject">
+        {% for i in projects %}
+        <div class="child">
+          <h1>{{i.project_name}}</h1>
+          <h1>{{i.basic_idea}}</h1>
+          <h1>{{i.project_type}}</h1>
+          <h1>{{i.phone_number}}</h1>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

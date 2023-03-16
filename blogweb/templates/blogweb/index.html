@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static '\uploads\index.css' %}" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="container1-home">
+      <div class="cir1"></div>
+      <div class="cir2"></div>
+      
+      <header id="navbar">
+        <nav class="navbar-container container">
+          <a href="/" class="home-link">
+            <div class="navbar-logo"><img src="{% static 'uploads\hak.jpeg'%}" class="hak"/></div>
+            HAK
+          </a>
+          <button
+            type="button"
+            id="navbar-toggle"
+            aria-controls="navbar-menu"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div id="navbar-menu" aria-labelledby="navbar-toggle">
+            <ul class="navbar-links">
+              <li class="navbar-item">
+                <a class="navbar-link" href="#home" id="hoome">home</a>
+              </li>
+              <li class="navbar-item">
+                <a class="navbar-link" href="#about"id='abt'>About me</a>
+              </li>
+              <li class="navbar-item">
+                <a class="navbar-link" href="#contact" id='cnt'>Contact</a>
+              </li>
+              <li class="navbar-item">
+                <a class="navbar-link" href="viewblogs/">My Activity</a>
+              </li>
+              <li class="navbar-item">
+                <a class="navbar-link" href="projects/">For Projects</a>
+              </li>
+              <li class="navbar-item">
+                <a class="navbar-link" href="viewprojects/">Check Projects</a>
+              </li>
+              <li class="navbar-item">
+                <a class="navbar-link" href="admin/">Admin</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <script src="index.js"></script>
+    </body>
+      <div class="home-page" id="home">
+        <div class="texts">
+          <h1 class="name typing">SAMEERUL HAK.S</h1>
+          <h3 class="intro">
+            Hello and welcome to my portfolio! I am a
+            <span id="span">full stack developer</span>
+            with a passion for creating innovative digital solutions. Boost your
+            digital presence with our scalable and secure full stack solutions.
+          </h3>
+          <h2 class="button"><a href="#about" id="kow">Know more</a></h2>
+        </div>
+        <div class="portimg">
+          <img src="{% static 'uploads\homeimg.svg'%}" class="homesvg" />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="about-container">
+        <div class="s1" data-aos="fade-right">
+          <img src="{% static 'uploads\myimg.jpeg'%}" class="myimg" />
+        </div>
+        <div class="s2" data-aos="fade-left">
+          <h1>Hello!</h1>
+          <h2>I'am a aspiring full stack developer</h2>
+          <h4>
+            As a full stack developer, I have a passion for creating innovative
+            and robust software applications that meet the needs of clients and
+            end-users alike. I bring a comprehensive skill set to the table,
+            including expertise in both front-end and back-end technologies, as
+            well as experience with databases and server administration.
+          </h4>
+        </div>
+        <div class="s3" data-aos="fade-right">
+          <h1>Details</h1>
+          <br />
+          <h2>NAME</h2>
+          <h3>Sameerul Hak</h3>
+
+          <h2>ROLE</h2>
+          <h3>Full stack developer</h3>
+
+          <h2>EMAIL</h2>
+          <h3>sameerulhakofficial@gmail.com</h3>
+
+          <h2>PHONE</h2>
+          <h3>9944012249</h3>
+          <h2>LinkedIn</h2>
+          <h3>sameerul hak</h3>
+        </div>
+        <div class="s4" data-aos="fade-left">
+          <div class="c1">
+            <h1 id="headi">CONTEST</h1>
+            <h1>10</h1>
+          </div>
+          <div class="c2">
+            <h1 id="headi">PROJECTS</h1>
+            <h1>2</h1>
+          </div>
+          <div class="c3">
+            <h1 id="headi">COURSES</h1>
+            <h1>2</h1>
+          </div>
+          <div class="c4">
+            <h1 id="headi">HACKATHONS</h1>
+            <h1>1</h1>
+          </div>
+        </div>
+        <div id="contact" data-aos="zoom-in-right">
+          <div class="cir3"></div>
+          <div class="cir4"></div>
+          <div class="glass">
+            <div class="leftg">
+              <h1 id="contname">Contact Me</h1>
+              <img
+                src="{% static 'uploads\contactleft.svg'%}"
+                c
+                class="contimg"
+              />
+            </div>
+            <div class="rightg">
+              <div class="box1">
+                <h1 id="name">Sameeerul Hak</h1>
+                <h2 id="nameint">Your friendly neighborhood developer</h2>
+              </div>
+              <h3 class="find">Find me on</h3>
+              <div class="box2">
+                <div class="cont-cl">
+                  <a href="https://www.instagram.com/sameerul_hak._.tg/?hl=en" id="ata">
+                  <img src="{% static 'uploads\insta.svg'%}" class="ico" />
+                  <h1 id="ico-d">@sameerul_hak._.tg</h1></a>
+                </div>
+                <div class="cont-cl">
+                  <a href="https://github.com/Sameerul-Hak " id="ata">
+                  <img src="{% static 'uploads\git.svg'%}" class="ico" />
+                  <h1 id="ico-d">@Sameerul-Hak</h1>
+                </a>
+                </div>
+                <div class="cont-cl">
+                  <a href="https://www.linkedin.com/in/sameerul-hak-877194249/"id="ata">
+                  <img src="{% static 'uploads\linkedin.svg'%}" class="ico" />
+                  <h1 id="ico-d"> @sameerul-hak</h1>
+                </a>
+                </div>
+                <div class="cont-cl">
+                  <img src="{% static 'uploads\mail.svg'%}" class="ico" />
+                  <h1 id="ico-d">sameerulhakofficial@gmail.com</h1>
+                </div>
+                <h1>Phone Number</h1>
+                <h2 id="ico-d">+91 9944012249</h2>
+              </div>
+              <a href="https://www.instagram.com/sameerul_hak._.tg/?hl=en" id="lets">
+              <h1 class="buttonc">Let's Chat</h1></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="{% static 'uploads\index.js'%}"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
