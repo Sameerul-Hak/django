@@ -73,12 +73,13 @@
 #navbar {
   --navbar-height: 64px;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: var(--navbar-height);
   background-color: var(--navbar-bg-color);
   left: 0;
   right: 0;
   z-index: 999;
+  background-color: #000000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
 }
 .navbar-container {
@@ -148,6 +149,8 @@
   width: 25px;
   height: 4px;
   margin: 2px;
+
+  z-index: 99999;
   background-color: var(--navbar-text-color);
 }
 #navbar-toggle:is(:focus, :hover) .icon-bar {
