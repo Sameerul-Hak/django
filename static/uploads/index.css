@@ -2,6 +2,10 @@
   margin: 0px;
   padding: 0px;
 }
+body{
+  width:90%;
+}
+
 .container1-home {
   /* background-color: rgb(220, 219, 219); */
   overflow: hidden;
@@ -15,6 +19,7 @@
   overflow: hidden;
   width: 100vw;
 }
+
 #ico-d {
   text-decoration: none;
 }
@@ -93,6 +98,9 @@
   font-size: 15px;
   width: 100%;
   font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-link,
@@ -114,7 +122,7 @@
   position: relative;
   right: 10px;
   text-align: center;
-  width: 110%;
+  width: fit-content;
   padding: 0.4em 0.8em;
   border-radius: 5px;
 }
@@ -176,11 +184,14 @@
   bottom: 0;
   opacity: 0;
   visibility: hidden;
+
   left: 0;
   right: 0;
 }
 #navbar-toggle[aria-expanded="true"] + #navbar-menu {
   background-color: rgba(0, 0, 0, 0.4);
+
+  width:100%;
   opacity: 1;
   visibility: visible;
 }
@@ -195,6 +206,8 @@
   right: 0;
   margin: 1.4rem;
   border-radius: 5px;
+  /* background:red; */
+  width: 90%;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -345,7 +358,7 @@
   height: 150px;
   border-radius: 100px;
   position: absolute;
-  top: 7%;
+  top: 10%;
   left: 7%;
   background: rgb(154, 118, 227);
   background: linear-gradient(
@@ -395,6 +408,8 @@
   align-items: center;
   flex-direction: column;
   padding: 1rem;
+  outline: 5px solid rgb(0, 0, 0);
+  outline-offset: -7px;
 }
 .s2 > h1 {
   font-size: 3rem;
@@ -427,6 +442,8 @@
   flex-direction: column;
   justify-content: space-around;
   background-color: rgb(170, 132, 245);
+  outline: 5px solid rgb(0, 0, 0);
+  outline-offset: -6px;
 }
 .s3 > h1 {
   font-size: 40px;
@@ -612,7 +629,8 @@
   height: 150px;
   border-radius: 100px;
   position: absolute;
-  left: 90%;
+  left: 80%;
+
   background: rgb(154, 118, 227);
   background: linear-gradient(
     90deg,
@@ -654,11 +672,14 @@
     font-size: 35px;
     position: relative;
     padding-inline: 10px;
-    bottom: 1%;
     color: white;
     z-index: 1;
-    top: 15px;
+    top: 4%;
   }
+  /* .main
+  {
+    overflow: hidden;
+  } */
   .button {
     /* background-color: azure; */
     padding: 10px;
@@ -680,6 +701,8 @@
   .intro {
     padding: 20px;
     color: #b493f6;
+    position: relative;
+    top: 2%;
     font-size: 33px;
     word-spacing: 7px;
   }
@@ -693,11 +716,11 @@
   .navbar {
     /* background-color: rgb(65, 226, 226); */
     display: flex;
-    width: 100%;
+    width: 80%;
     height: 50px;
     justify-content: space-around;
     align-items: center;
-    background-color: black;
+    background-color: rgb(228, 135, 135);
     position: fixed;
   }
   .nav-items {
@@ -880,7 +903,8 @@
   }
   #contname {
     font-size: 30px;
-    border-bottom: 2px dotted black;
+    border-bottom: 1px dotted #9366eb;
+    background-color:#aa84f5;
   }
   .rightg {
     width: fit-content;

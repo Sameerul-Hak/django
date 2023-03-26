@@ -7,6 +7,9 @@ from django.views.decorators.csrf import csrf_protect
 from twilio.rest import Client
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
+from django.core.mail import send_mail
+from django.conf import settings
+from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
@@ -29,19 +32,18 @@ def projects_save(request):
     if request.method == 'POST':
         form = ProjectsForm(request.POST)
         if form.is_valid():
-            print(request.POST)
-            # Do something with the form data
+            # Save the form data
             form.save()
-            account_sid = settings.TWILIO_ACCOUNT_SID
-            auth_token = settings.TWILIO_AUTH_TOKEN
-            client = Client(account_sid, auth_token)
-            message = client.messages.create(
-                body=f"New project submitted:regarding about {form.cleaned_data['project_name']} ",
-                from_="+15673671530",
-                to="+919944012249"
-            )
-            print(message.sid)
-            return redirect("/home/")
+
+            # Send an email notification
+            subject = 'New project submitted'
+            message = f"New project submitted: regarding {form.cleaned_data['project_name']}"
+            from_email = settings.EMAIL_HOST_USER
+            recipient_list = ['sameerulhakofficial@gmail.com']
+            send_mail(subject, message, from_email, recipient_list, fail_silently=False)
+
+            # Return a success response
+            return render(request,'blogweb/index.html')
     else:
         form = ProjectsForm()
     return render(request, 'blogweb/projetcs.html', {'form': form})

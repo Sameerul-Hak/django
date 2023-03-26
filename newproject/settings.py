@@ -26,6 +26,13 @@ SECRET_KEY = 'django-insecure-d4bg!k=y9*0*doh1h7y)q4_v4gr_*bwo6m7ab^&t=8+ccjfjd0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'sameerulhakofficial@gmail.com'
+EMAIL_HOST_PASSWORD = 'ayckmfawnaehhmws'
+
 ALLOWED_HOSTS = []
 
 
@@ -81,13 +88,20 @@ WSGI_APPLICATION = 'newproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': "portfolio",
-        'HOST':'localhost',
-        'USER':'root',
-        "PASSWORD":"root123",
+        'NAME': "btleqzzjkcuafkqq7qak",
+        'HOST':'btleqzzjkcuafkqq7qak-mysql.services.clever-cloud.com',
+        'USER':'ulrfqerge2ipvlju',
+        "PASSWORD":"T1e4XEtru79n3ouP9TrO",
         "PORT":"3306"
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 
 
 # Password validation

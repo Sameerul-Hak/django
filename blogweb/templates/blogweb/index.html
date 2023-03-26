@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{% static '\uploads\index.css' %}" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    {% comment %} <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> {% endcomment %}
     <title>Document</title>
   </head>
   <body>
+    <div class="main">
     <section class="container1-home">
       <div class="cir1"></div>
       <div class="cir2"></div>
@@ -182,5 +183,6 @@
     <script>
       AOS.init();
     </script>
+  </div>
   </body>
 </html>
